@@ -302,6 +302,7 @@ limitations under the License.
 <script src="js/mqttws31.js"></script>
 <script src="js/encoder.js"></script>
 <script src="js/app.js"></script>
+<script src="config.js"></script>
 
 <script>
 
@@ -316,6 +317,8 @@ limitations under the License.
     $(document).foundation();
     $(document).ready(function () {
 
+        $('#urlInput').val(websocketserver);
+        $('#portInput').val(websocketport);
         $('#clientIdInput').val('clientId-' + randomString(10));
 
         $('#colorChooser').minicolors();
