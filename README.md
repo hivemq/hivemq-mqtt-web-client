@@ -32,3 +32,7 @@ If you don’t like to use a self hosted (or locally running) HiveMQ, you can us
 ## Why another MQTT Client
 
 We at [dc-square GmbH](http://www.dc-square.de/en/ "dc-square GmbH") needed a quick and simple way to develop and test our applications which use MQTT over websockets, so we sat down for a few hours and built this client which also works for your local development machine.
+
+## Can I embedd it / ship it with my software?
+
+Sure! We would however be very glad if you would honor the work by linking to the original client source or mentioning that this websocket client was developed initially for HiveMQs websocket support. 
