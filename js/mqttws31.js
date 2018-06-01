@@ -313,7 +313,9 @@ Messaging = (function (global) {
                 else if (!(payloadBytes instanceof Uint8Array))
                     payloadBytes = new Uint8Array(payloadBytes.buffer);
                 break;
-
+            case MESSAGE_TYPE.PUBREL:
+                first |= 0x02;
+                break;
             case MESSAGE_TYPE.DISCONNECT:
                 break;
 
