@@ -231,7 +231,7 @@ var websocketclient = {
     },
 
     'compareTopics': function (topic, subTopic) {
-        var pattern = subTopic.replace("+", "(.+?)").replace("#", "(.*)");
+        var pattern = subTopic.replace("+", "(.*?)").replace("#", "(.*)");
         var regex = new RegExp("^" + pattern + "$");
         return regex.test(topic);
     },
