@@ -36,3 +36,12 @@ We at [dc-square GmbH](http://www.dc-square.de/en/ "dc-square GmbH") needed a qu
 ## Can I embedd it / ship it with my software?
 
 Sure! We would however be very glad if you would honor the work by linking to the original client source or mentioning that this websocket client was developed initially for HiveMQs websocket support. 
+
+# Contributing
+
+If you want to contribute to HiveMQ MQTT Web Client, see the [contribution guidelines](CONTRIBUTING.md).
+
+# License
+
+HiveMQ MQTT Web Client is licensed under the `APACHE LICENSE, VERSION 2.0`. A copy of the license can be found [here](LICENSE).
+
