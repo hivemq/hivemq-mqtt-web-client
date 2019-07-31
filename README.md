@@ -21,7 +21,7 @@ You can also use this client to connect to a broker on your local machine ("loca
 
 ## MQTT Broker
 
-This web client works perfectly with the [HiveMQ MQTT broker](http:://www.hivemq.com/ "HiveMQ MQTT Broker") with enabled websockets.
+This web client works perfectly with the [HiveMQ MQTT broker](https://www.hivemq.com/hivemq/ "HiveMQ MQTT Broker") with enabled websockets.
 
 If you don’t like to use a self hosted (or locally running) HiveMQ, you can use the [public MQTT broker](http://www.hivemq.com/showcase/public-mqtt-broker/ "Public MQTT Server") from the [MQTTDashboard](http://www.mqttdashboard.com/ "MQTT Dashboard").
 
