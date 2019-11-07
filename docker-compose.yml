@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  hivemq-mqtt-client:
+    image: distronix/hivemq-mqtt-client
+    build: .
+    ports:
+      - 80:80
