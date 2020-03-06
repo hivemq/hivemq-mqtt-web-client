@@ -313,13 +313,27 @@ limitations under the License.
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         return text;
     }
+    function getUrlParameter(sParam, dflt) {
+        var sPageURL = window.location.search.substring(1);
+	    var sURLVariables = sPageURL.split('&');
+	    for (var i = 0; i < sURLVariables.length; i++) {
+	        var sParameterName = sURLVariables[i].split('=');
+	        if (sParameterName[0] == sParam) {
+	            return sParameterName[1] === undefined ? dflt : sParameterName[1];
+	        }
+        }
+        return dflt;
+    }
 
     $(document).foundation();
     $(document).ready(function () {
 
-        $('#urlInput').val(websocketserver);
-        $('#portInput').val(websocketport);
-        $('#clientIdInput').val('clientId-' + randomString(10));
+        $('#urlInput').val(getUrlParameter('host', websocketserver));
+        $('#portInput').val(getUrlParameter('port', websocketport));
+        $('#clientIdInput').val(getUrlParameter('client-id', 'clientId-' + randomString(10)));
+        $('#userInput').val(getUrlParameter('username', ''));
+        $('#pwInput').val(getUrlParameter('password', ''));
+        $('#sslInput').prop("checked", getUrlParameter('ssl', 'false') === 'true' ? true : false);
 
         $('#colorChooser').minicolors();
 
@@ -333,6 +347,10 @@ limitations under the License.
         websocketclient.render.toggle('publish');
         websocketclient.render.toggle('messages');
         websocketclient.render.toggle('sub');
+
+        if (getUrlParameter('auto-connect', 'false') === 'true') {
+            websocketclient.connect();
+        }
     });
 </script>
 </body>
