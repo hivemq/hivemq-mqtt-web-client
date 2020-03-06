@@ -12,6 +12,9 @@ See it in action at [http://hivemq.com/demos/websocket-client/](http://www.hivem
 
 Read the blog post about ["A full-featured MQTT client for your browser"](http://www.hivemq.com/full-featured-mqtt-client-browser/ "A full-featured MQTT client for your browser")
 
+You can use the following HTTP GET parameters to customize default inputs: `host`, `port`, `client-id`, `username`, `password`, `ssl` (true or false)
+An extra `auto-connect` (true or false) parameter is also available to attempt connection upon page load.
+
 
 ## Localhost / Local network
 
