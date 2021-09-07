@@ -24,6 +24,17 @@ var websocketclient = {
     'messages': [],
     'connected': false,
 
+    'prefill': function () {
+
+        let parameters = new URLSearchParams(window.location.search)
+        $('#userInput').val(parameters.get('username'));
+        $('#urlInput').val(parameters.get('host'));
+        $('#portInput').val(parameters.get('port'));
+        $('#sslInput').checked("checked");
+        console.log("PREFILL")
+
+    },
+
     'connect': function () {
 
         var host = $('#urlInput').val();

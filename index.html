@@ -33,7 +33,7 @@ limitations under the License.
     <link rel="stylesheet" href="css/jquery.minicolors.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
 </head>
-<body class="notconnected">
+<body class="notconnected" onload="websocketclient.prefill()">
 
 <div id="header">
     <div>
@@ -102,7 +102,7 @@ limitations under the License.
 
                     <div class="large-1 columns">
                         <label>SSL</label>
-                        <input id="sslInput" type="checkbox"/>
+                        <input id="sslInput" type="checkbox" checked=""/>
                     </div>
 
                     <div class="large-2 columns">
@@ -333,6 +333,7 @@ limitations under the License.
         websocketclient.render.toggle('publish');
         websocketclient.render.toggle('messages');
         websocketclient.render.toggle('sub');
+        websocketclient.prefill();
     });
 </script>
 </body>
