@@ -25,18 +25,14 @@ var websocketclient = {
     'connected': false,
 
     'prefill': function () {
-
         let parameters = new URLSearchParams(window.location.search)
-        $('#userInput').val(parameters.get('username'));
-        $('#urlInput').val(parameters.get('host'));
-        $('#portInput').val(parameters.get('port'));
-        $('#sslInput').checked("checked");
-        console.log("PREFILL")
-
+        if (parameters.get('username') != null) {$('#userInput').val(parameters.get('username'))} ;
+        if (parameters.get('host') != null) {$('#urlInput').val(parameters.get('host'))};
+        if (parameters.get('port') != null) {$('#portInput').val(parameters.get('port'))};
+        if (parameters.get('host') != null) {$('#sslInput').click()};
     },
 
     'connect': function () {
-
         var host = $('#urlInput').val();
         var port = parseInt($('#portInput').val(), 10);
         var clientId = $('#clientIdInput').val();
@@ -351,3 +347,5 @@ var websocketclient = {
         }
     }
 };
+
+websocketclient.prefill()

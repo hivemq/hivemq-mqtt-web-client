@@ -1,43 +1,23 @@
 <!DOCTYPE html>
-<!--
-Copyright 2013 dc-square GmbH
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-@author: Christoph Schäbel
-
--->
 <!--[if IE 8]>
 <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Try HiveMQ MQTT browser client – a websocket client that you can use to experiment with publishing and subscribing MQTT messages over port 8000">
     <title>MQTT Websocket Client</title>
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/jquery.minicolors.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
 </head>
-<body class="notconnected" onload="websocketclient.prefill()">
-
+<body class="notconnected">
 <div id="header">
     <div>
-        <a href="http://www.hivemq.com"><img id="headerlogo" src="assets/logo.png"></a>
+        <a href="https://www.hivemq.com"><img id="headerlogo" src="assets/hivemq-logo.svg" alt"HiveMQ Logo" title="HiveMQ" style="width: 275px; height: 65px"></a>
         <span id="headertitle">Websockets Client Showcase</span>
     </div>
 </div>
@@ -62,17 +42,17 @@ limitations under the License.
             <div class="row">
                 <form class="custom">
                     <div class="large-5 columns">
-                        <label>Host *</label>
+                        <label>Host</label>
                         <input id="urlInput" type="text" value="broker.mqttdashboard.com">
                     </div>
 
                     <div class="large-1 columns">
-                        <label>Port *</label>
+                        <label>Port</label>
                         <input id="portInput" type="text" value="8000"/>
                     </div>
 
                     <div class="large-4 columns">
-                        <label>ClientID *</label>
+                        <label>ClientID</label>
                         <input id="clientIdInput" type="text"/>
                     </div>
 
@@ -102,7 +82,7 @@ limitations under the License.
 
                     <div class="large-1 columns">
                         <label>SSL</label>
-                        <input id="sslInput" type="checkbox" checked=""/>
+                        <input id="sslInput" type="checkbox"/>
                     </div>
 
                     <div class="large-2 columns">
@@ -302,7 +282,6 @@ limitations under the License.
 <script src="js/mqttws31.js"></script>
 <script src="js/encoder.js"></script>
 <script src="js/app.js"></script>
-<script src="config.js"></script>
 
 <script>
 
@@ -317,8 +296,6 @@ limitations under the License.
     $(document).foundation();
     $(document).ready(function () {
 
-        $('#urlInput').val(websocketserver);
-        $('#portInput').val(websocketport);
         $('#clientIdInput').val('clientId-' + randomString(10));
 
         $('#colorChooser').minicolors();
@@ -333,7 +310,6 @@ limitations under the License.
         websocketclient.render.toggle('publish');
         websocketclient.render.toggle('messages');
         websocketclient.render.toggle('sub');
-        websocketclient.prefill();
     });
 </script>
 </body>
