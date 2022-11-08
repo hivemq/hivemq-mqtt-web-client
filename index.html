@@ -17,11 +17,97 @@
 <body class="notconnected">
 <div id="header">
     <div>
-        <a href="https://www.hivemq.com"><img id="headerlogo" src="assets/hivemq-logo.svg" alt"HiveMQ Logo" title="HiveMQ" style="width: 275px; height: 65px"></a>
+        <a href="https://www.hivemq.com"><img id="headerlogo" src="assets/hivemq-logo.svg" alt="HiveMQ Logo" title="HiveMQ" style="width: 275px; height: 65px"></a>
         <span id="headertitle">Websockets Client Showcase</span>
     </div>
 </div>
 <div id="content" class="row">
+    <div class="row large-12 columns hivemq-cloud">
+    <div class="large-12 columns">
+        <a href="https://console.hivemq.cloud/?utm_source=mqtt-web-client&utm_medium=banner&utm_campaign=cloud" title="Get your free HiveMQ Cloud account" class="panel hivemq-cloud-container">
+            <div class="hivemq-cloud-icon">
+                <img src="https://console.hivemq.cloud/assets/05-hivemq-cloud-icon.2bb74fa0.svg" width="50" height="50" alt="HiveMQ Cloud Logo">
+            </div>
+
+            <div class="hivemq-cloud-title">
+                <h3>Need a fully managed MQTT broker?</h3>
+                <p>
+                    Get your own Cloud broker and connect up to 100 devices for free
+                </p>
+            </div>
+
+            <button role="button" class="hivemq-cloud-btn">Get your free account</button>
+        </a>
+    </div>
+
+<style>
+.hivemq-cloud {
+    width: 100% !important;
+    margin-bottom: 2rem !important;
+}
+
+.hivemq-cloud-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #80b6df 0%, #ebf2f9 40%, #ebf2f9 60%, #80b6df 100%);
+    padding: 0.5rem;
+    gap: 2rem;
+}
+
+.hivemq-cloud-btn {
+    background-color: #ffc000;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 140px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 400;
+    color: #333;
+    transition: background-color;
+    -webkit-transition: background-color;
+    transition-duration: .25s;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.hivemq-cloud-btn:hover {
+    color: #ffc000;
+    background-color: #333;
+}
+
+.hivemq-cloud-title {
+
+}
+
+.hivemq-cloud-title h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 0.25rem;
+    line-height: 1;
+}
+
+.hivemq-cloud-title p {
+    font-size: 1rem;
+    color: #444;
+    margin: 0;
+    line-height: 1;
+}
+
+@media only screen and (max-width: 700px) {
+    .hivemq-cloud-container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(90deg, #80b6df 0%, #ebf2f9 40%, #ebf2f9 60%, #80b6df 100%);
+        padding: 1rem;
+        gap: 1rem;
+        border-radius: 5px;
+    }
+}
+</style>
+</div>
 <div id="connection" class="row large-12 columns">
 
     <div class="large-8 columns conniTop">
@@ -132,7 +218,6 @@
         </div>
 
         <div class="large-12 columns" id="publishMain">
-
             <!-- Grid Example -->
             <div class="row panel" id="publishPanel">
                 <div class="large-12 columns">
